@@ -296,6 +296,7 @@ jobs:
           cd $GITHUB_WORKSPACE/kernel_workspace/android-kernel
           git clone --recursive ${{ env.SUSFS_SOURCE }} -b ${{ env.SUSFS_SOURCE_BRANCH }} susfs4ksu --depth=1
 
+          cp susfs4ksu/kernel_patches/KernelSU/10_enable_susfs_for_ksu.patch ${{ env.KERNELSU_TYPE }}/
           
 
           cd ${{ env.KERNELSU_TYPE }}
